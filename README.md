@@ -1,3 +1,5 @@
+Made using React.js, Tailwind CSS for stying and Redux to manage state
+
 Click on the link below to run the project👇
 
 https://todo-app-assignment01.netlify.app/
