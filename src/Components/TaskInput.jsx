@@ -11,7 +11,7 @@ const TaskInput = () => {
         />
       </div>
       <div className="addBtn">
-        <button className="bg-green-500 text-white font-semibold p-2 rounded-md">
+        <button className="bg-green-500 text-white font-semibold p-2 rounded-md hover:bg-green-600 transition-all">
           Add +
         </button>
       </div>
