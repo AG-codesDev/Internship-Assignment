@@ -1,8 +1,11 @@
-# React + Vite
+Click on the link below to run the project👇
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://todo-app-assignment01.netlify.app/
 
-Currently, two official plugins are available:
+- Click on text field to write your todos.
+- then click on add button to add todo
+- Once added, it will show up below
+- There is option to either delete or edit the todo.
+- If you want to delete, click red button, it will be deleted and if you want to edit click edit button and save when done.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Additionally, there is a simple checkbox at start of ever todo which can be used to mark that this task is completed.
