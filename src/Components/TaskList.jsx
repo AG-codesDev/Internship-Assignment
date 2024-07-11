@@ -32,6 +32,7 @@ const TaskList = () => {
           className="individualTask bg-slate-200 shadow-lg flex p-3 items-center rounded-md justify-between w-[90%]"
           key={i}
         >
+          <input type="checkbox" name="" id="" className="h-5 w-5" />
           {editMode === todo ? (
             <input
               type="text"
