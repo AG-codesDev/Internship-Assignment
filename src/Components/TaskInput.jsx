@@ -28,7 +28,7 @@ const TaskInput = () => {
       <div className="inputBox w-4/5">
         <input
           type="text"
-          className="border-2 rounded-md p-2 focus:outline-none w-full border-gray-400"
+          className="border-2 rounded-md p-2 focus:outline-none w-full shadow-md"
           placeholder="Enter a Task"
           ref={inputElement}
           onKeyDown={(e) => handleEnterPress(e)}
@@ -36,7 +36,7 @@ const TaskInput = () => {
       </div>
       <div className="addBtn">
         <button
-          className="bg-green-500 text-white font-semibold p-2 rounded-md hover:bg-green-600 transition-all"
+          className="bg-green-500 shadow-lg text-white font-semibold p-2 rounded-md hover:bg-green-600 transition-all"
           onClick={handleAddClick}
         >
           Add +

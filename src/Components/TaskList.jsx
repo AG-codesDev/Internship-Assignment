@@ -46,7 +46,7 @@ const TaskList = () => {
           <div className="flex gap-5">
             {editMode === todo ? (
               <button
-                className="bg-green-600 text-white rounded-md"
+                className="bg-green-600 text-white rounded-md shadow-lg"
                 onClick={() => handleSave(todo)}
               >
                 <span className="flex items-center gap-2 p-1">
@@ -55,7 +55,7 @@ const TaskList = () => {
               </button>
             ) : (
               <button
-                className="bg-blue-600 text-white rounded-md"
+                className="bg-blue-600 text-white rounded-md shadow-lg"
                 onClick={() => handleEditBtn(todo)}
               >
                 <span className="flex items-center gap-2 p-1">
@@ -68,7 +68,7 @@ const TaskList = () => {
             )}
 
             <button
-              className="bg-red-600 text-white rounded-md"
+              className="bg-red-600 text-white rounded-md shadow-lg"
               onClick={() => handleDelete(todo)}
             >
               <span className="flex items-center gap-2 p-1">
