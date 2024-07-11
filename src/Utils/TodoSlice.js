@@ -10,7 +10,7 @@ const TodoSlice = createSlice({
       state.todos.push(action.payload);
     },
     deleteTodo: (state, action) => {
-      state.todos.pop();
+      state.todos = state.todos.filter((todos) => todos !== action.payload);
     },
   },
 });
