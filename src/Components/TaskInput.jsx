@@ -1,21 +1,21 @@
-import React, { useRef, useState } from "react";
+import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../Utils/TodoSlice";
 
 const TaskInput = () => {
-  const [taskName, setTaskName] = useState("");
-
+  // used useRef to refer input tag
   const inputElement = useRef(null);
 
   const dispatch = useDispatch();
 
+  // as handle button is clicked it will dispatch an action 'addtodo' which will have todoName as parameter. todoName will be accessed using useRef hook.
   const handleAddClick = () => {
-    // console.log("handle clicked");
-    console.log(inputElement.current.value);
+    // console.log(inputElement.current.value);
     dispatch(addTodo(inputElement.current.value));
     inputElement.current.value = "";
   };
 
+  //this function will handle enterPress, it will perform exactly same functiion like addtodo
   const handleEnterPress = (e) => {
     if (e.key === "Enter") {
       dispatch(addTodo(inputElement.current.value));

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MdEdit } from "react-icons/md";
 import { MdDelete } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
@@ -10,15 +10,19 @@ const TaskList = () => {
   const [editMode, setEditMode] = useState(null);
   const [currentTodo, setCurrentTodo] = useState("");
 
+  // handle delete is there to handle delete click. when 'delete' button is clicked, it will dispatch an action with 'todoname' as parameter which then will be handled inside redux store. In redux store, the array will be filtered and array will be updated with newer value in which there will not be the item on which delete was clicked
+
   const handleDelete = (todo) => {
     dispatch(deleteTodo(todo));
   };
 
+  // when handle delete is clicked, it will be matched to todoname, if name matches then that particular todo will be set to edit mode and there will be option to edit the text, current todo name will be updated as user types using useState variable
   const handleEditBtn = (todo) => {
     setEditMode(todo);
     setCurrentTodo(todo);
   };
 
+  // save button will dispatch an action with an object containing old todo and newtodo which will be handled in redux store. edit mode will be set to null so that the option to change text disappears & edit button appears once again
   const handleSave = (todo) => {
     dispatch(updateTodo({ oldTodo: todo, newTodo: currentTodo }));
     setEditMode(null);
