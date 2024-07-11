@@ -1,7 +1,11 @@
+import Container from "./Components/Container";
+
 function App() {
   return (
     <>
-      <div className="font-bold text-black bg-green-500"></div>
+      <div className="bg-gray-200 w-full h-screen flex items-center justify-center">
+        <Container />
+      </div>
     </>
   );
 }
