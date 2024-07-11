@@ -16,6 +16,13 @@ const TaskInput = () => {
     inputElement.current.value = "";
   };
 
+  const handleEnterPress = (e) => {
+    if (e.key === "Enter") {
+      dispatch(addTodo(inputElement.current.value));
+      inputElement.current.value = "";
+    }
+  };
+
   return (
     <div className="flex items-center gap-2 justify-center">
       <div className="inputBox w-4/5">
@@ -24,6 +31,7 @@ const TaskInput = () => {
           className="border-2 rounded-md p-2 focus:outline-none w-full border-gray-400"
           placeholder="Enter a Task"
           ref={inputElement}
+          onKeyDown={(e) => handleEnterPress(e)}
         />
       </div>
       <div className="addBtn">
